@@ -1,0 +1,222 @@
+<app-header></app-header>
+<!-- BEGIN CONTENT-->
+<div id="content">
+  <section style="margin-left: -30px; margin-right: -90px;">
+    <div class="section-header">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Driver Registration Details</h2>
+        </div>
+        <div class="col-md-6">
+          <ol class="breadcrumb" style="background-color: #e5e6e6">
+            <li><a href="<?php echo $base_url; ?>dashboard.php"><i class="fa fa-home"></i> Home</a></li>
+            <li class="active">Driver Registration Details</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="section-body contain-lg">
+    </div>
+    <div class="section-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <form class="form floating-label form-validate" role="form">
+                <div class="col-xs-12 col-md-4">
+                  <label>Driver ID <span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.id}}" type="text" data-validation="required" data-validation-error-msg="Enter Driver ID" [disabled]="driverRegisrationModel">
+
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Full Name <span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.driverName}}" type="text" data-validation="required" data-validation-error-msg="Enter Full Name" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Contact No.<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.contactNo}}" type="text" data-validation="number length" data-validation-length="10-12" data-validation-error-msg="Contact No. has to be an Numeric value (10-12 chars)" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>IMEI No.<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.imeino}}" type="text" data-validation="number length" data-validation-length="16-16" data-validation-error-msg="IMEI No. has to be an Numeric value (16-16 chars)" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Email ID <span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.emailId}}" type="email" data-validation="email" data-validation-error-msg="Enter Email ID" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>State<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" data-validation="required" value="{{driverRegisrationModel.state}}" data-validation-error-msg="Select State" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>City<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input id="user-role3" class="form-control" value="{{driverRegisrationModel.city}}" data-validation="required" data-validation-error-msg="Select City" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Car Type<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input id="user-role2" class="form-control" value="{{driverRegisrationModel.carType}}" data-validation="required" data-validation-error-msg="Select Car Type" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Car Model<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input id="user-role1" class="form-control" value="{{driverRegisrationModel.carModel}}" data-validation="required" data-validation-error-msg="Select Car Model" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Car Number <span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.carNo}}" type="text" data-validation="required" data-validation-error-msg="Enter Car Number" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Seating Capacity <span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.seatingCapacity}}" type="text" data-validation="required" data-validation-error-msg="Enter Seating Capacity" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Car Purchase Year <span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.carPurchaseYear}}" type="text" data-validation="required" data-validation-error-msg="Enter Car Purchase Year" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>License Number <span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.licenseNo}}" type="text" data-validation="required" data-validation-error-msg="Enter License Number" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Aadhar No<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.adhaarNo}}" type="text" data-validation="number length" data-validation-length="12-12" data-validation-error-msg="Aadhar Number has to be an Numeric value (12 chars)" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <label>Driver Address<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <input class="form-control" value="{{driverRegisrationModel.driverAddress}}" type="text" data-validation="required" data-validation-error-msg="Enter Driver Address" [disabled]="driverRegisrationModel">
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-md-4">
+                  <div class="form-group">
+                    <input type="button" (click)="getById(driverRegisrationModel.id);" data-toggle="modal" (click)="onOpenConfirm('renew-sub-modal');" data-target="#renew-sub-modal" class="btn ink-reaction btn-primary" value="Approve">&nbsp;
+                    <input type="button" (click)="reject(driverRegisrationModel.id);"  class="btn ink-reaction btn-default-dark" value="Reject">&nbsp;
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!--end .row -->
+    </div>
+  </section>
+</div>
+<!-- END CONTENT -->
+
+<div class="modal fade" id="renew-sub-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="simpleModalLabel">Assign Package</h4>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSave()" [formGroup]="myForm">
+        <div class="row">
+            <div class="col-md-6">
+              <label>Driver Name</label>
+              <div class="form-group">
+                <input class="form-control" type="text" [value]="driverRegisrationModel.driverName" [disabled]="driverRegisrationModel">
+              </div>
+              <label>Driver ID</label>
+              <div class="form-group">
+                <input class="form-control" type="text" [value]="driverRegisrationModel.id" [disabled]="driverRegisrationModel">
+
+              </div>
+              <label>Existing Left Balance</label>
+              <div class="form-group">
+                <input class="form-control" name="existingLeftAmount" formControlName="existingLeftAmount" type="text"  [disabled]="myForm">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label>Subscription<span class="text-danger">*</span></label>
+              <div class="form-group">
+                <select id="user-role" class="form-control" formControlName="subscription" (change)="getSubscription($event.target.value)" data-validation="required" data-validation-error-msg="Select Subscription">
+                  <option value="">Select Subscription</option>
+                  <option value="silver">Silver</option>
+                  <option value="gold">Gold</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <label>Subscription Amount</label>
+              <div class="form-group">
+                <input class="form-control" formControlName="subscriptionAmount" type="text"  [disabled]="myForm">
+              </div>
+              <label>Total Available Balance</label>
+              <div class="form-group">
+                <input class="form-control" formControlName="totalAmount" type="text"  [disabled]="myForm">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label>From</label>
+              <div class="manual-entry">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
+                    <div class="input-group-content">
+                      <input class="form-control datepicker"  formControlName="fromDate" type="text" data-validation="required" data-validation-error-msg="Select From Date" [disabled]="myForm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label>To</label>
+              <div class="manual-entry">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
+                    <div class="input-group-content">
+                      <input class="form-control datepicker"  formControlName="toDate" type="text" data-validation="required" data-validation-error-msg="Select To Date" [disabled]="myForm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="col-md-6">
+                <label>Validity</label>
+                <div class="form-group">
+                  <input class="form-control"  formControlName="validity" type="text" [disabled]="myForm">
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <button class="btn btn-primary" type="submit" name="submit" (click)="onCloseConfirm('renew-sub-modal');">Assign Now</button>&nbsp;
+              <button data-dismiss="modal" (click)="assignLater(driverRegisrationModel.id);" aria-hidden="true" (click)="onCloseConfirm('renew-sub-modal');" class="btn btn-default-dark">Assign Later</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<app-navigation></app-navigation>

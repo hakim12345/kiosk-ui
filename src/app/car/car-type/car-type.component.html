@@ -1,0 +1,126 @@
+<app-header></app-header>
+<!-- BEGIN CONTENT-->
+<div id="content">
+  <section style="margin-left: -30px; margin-right: -90px;">
+    <div class="section-header">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Car Type <a class="btn btn-sm ink-reaction btn-floating-action btn-primary" href="" data-toggle="modal" data-target="#view-des-modal" (click)="onOpenConfirm('view-des-modal');"><i class="fa fa-plus"></i></a></h2>
+        </div>
+        <div class="col-md-6">
+          <ol class="breadcrumb" style="background-color: #e5e6e6">
+            <li><a href="<?php echo $base_url; ?>/dashboard.php"><i class="fa fa-home"></i> Home</a></li>
+            <li class="active">Car Type</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <p style="color: #8c17a0; text-align: center">{{messages}}</p>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-striped table-bordered dataTable no-footer ResTable" cellspacing="0" width="100%">
+                <thead>
+                <tr class="text-uppercase">
+                  <th class="text-center" style="width:50px">No.</th>
+                  <th>Car Type</th>
+                  <th class="text-center" style="width:150px">action</th>
+                </tr>
+                </thead>
+                <tbody *ngFor="let carType of carTypes">
+                <tr>
+                  <td class="text-center">{{carType.id}}</td>
+                  <td>{{carType.carType}}</td>
+                  <td class="text-center">
+                    <table class="actionIcon">
+                      <tr>
+                        <td><a (click)="getCarTypeById(carType.id);" title="Edit" (click)="onOpenConfirm('edit-des-modal');" data-toggle="modal" data-target="#edit-des-modal" data-tooltip="tooltip" data-placement="top" data-original-title="Edit Record"><i class="fa fa-pencil" style="color: green"></i></a></td>
+                        <td><a (click)=deleteCarType(carType.id) title="Delete"><i class="fa fa-trash" style="color: red"></i></a>&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!--end .row -->
+    </div>
+  </section>
+</div>
+<!-- END CONTENT -->
+<script src="'.$base_url.'/js/form-validator/jquery-form-validator_2.3.26.min.js"></script>
+
+<jw-modal id="view-des-modal" tabindex="-1" role="dialog" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="simpleModalLabel">Add Car Type</h4>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="saveCarType()" [formGroup]="myForm">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="carType">Car type<span class="text-danger">*</span></label>
+                <input class="form-control" type="text" ngModel name="carType" formControlName="carType" data-validation="required" id="carType" data-validation-error-msg="Enter Car Type" />
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <button class="btn btn-primary" type="submit" name="submit"  (click)="onCloseConfirm('view-des-modal');">Submit</button>&nbsp;
+              <a href="" data-dismiss="modal" aria-hidden="true" class="btn btn-default-dark">Cancel</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</jw-modal>
+
+<jw-modal class="modal" id="edit-des-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="simpleModalLabel1">Add Car Type</h4>
+      </div>
+      <div class="modal-body">
+          <form (ngSubmit)="editCarType()" [formGroup]="myForm">
+          <div class="row">
+            <input class="form-control" type="hidden" ngModel name="id" data-validation="required" formControlName="id" />
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="carType1">Car type<span class="text-danger">*</span></label>
+                <input class="form-control" type="text" ngModel name="carType" data-validation="required" id="carType1" formControlName="carType" data-validation-error-msg="Enter Car Type" />
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <button class="btn btn-primary" type="submit" name="submit"  (click)="onCloseConfirm('edit-des-modal');">Submit</button>&nbsp;&nbsp;
+              <a href="" data-dismiss="modal" aria-hidden="true" class="btn btn-default-dark">Cancel</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</jw-modal>
+
+<!--<div class="modal fade" id="view-des-modal01" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-center">
+      <div class="modal-body" >
+        <div class="text-center">
+          <h3>Are you sure you want to Delete?</h3>
+          <br >
+          <button type="button" class="btn btn-primary" id="approveButton" (click)=deleteCarType(carType) data-dismiss="modal">Yes</button>&nbsp;
+          <button type="button" class="btn" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<app-navigation></app-navigation>

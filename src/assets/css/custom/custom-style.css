@@ -1,0 +1,58 @@
+.marRight20{margin-right:20px}
+.marBottom10{margin-bottom:10px}
+.has-error .forgot-pass a, .has-success .forgot-pass a{color: #6f7676 !important;}
+.notification-body{max-width:275px; overflow:hidden}
+.notification-body li a p{word-break: keep-all; overflow:hidden; line-height:17px; white-space:initial}
+#content .section-header {height: inherit;}
+.section-header ol.breadcrumb{text-align:right}
+.section-header ol.breadcrumb li.active{font-size:13px}
+.section-header ol.breadcrumb li a{color:#000}
+.section-header ol.breadcrumb li a:hover{text-decoration:none; color:#08867e}
+table.ResTable > thead > tr{color:#fff; background:#0f1720}
+table.ResTable > thead > tr > th{line-height:13px !important;}
+table.ResTable tr td{vertical-align:inherit !important}
+table.actionIcon{margin:0 auto; text-align:center}
+table.actionIcon tr{background:transparent !important}
+table.actionIcon tr td{padding:0 5px}
+table.actionIcon tr td a[disabled]{pointer-events: none; cursor: not-allowed; filter: alpha(opacity=65); opacity: .65;}
+.dt-buttons a.dt-button, .dt-buttons a.dt-button:focus, .dt-buttons a.dt-button:active, .dt-buttons a.dt-button:hover {border: 0; background:#404953; color: #fff; text-shadow: none; padding: 0.4em 1.2em; margin-right:15px;}
+table.dataTable thead th, table.dataTable thead td {padding: 10px 11px;}
+
+/* Gatekeeper Pages css*/
+.manual-entry .flat-block{margin-top:47px;}
+.manual-entry .has-error .input-group-addon, .manual-entry .has-success .input-group-addon{background:#fff; border-top:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #fff;}
+.manual-entry .has-error .help-block{margin-left:40px}
+.manual-entry .addMemnber span{margin-left:10px}
+.manual-entry .addMemnber span a{margin-left:5px; text-decoration:underline}
+.manual-entry .addMemnber span a:first-child{margin-left:0px}
+#selectedImage{position:relative; width:240px; height:auto; margin:0 auto;}
+#selectedImage img{width:100%; height:auto}
+#selectedImage input[type="file"] {font-size: 100px;  position: absolute; left: 0;  top: 0; opacity: 0; cursor:pointer;}
+#selectedImage .custom-file-upload{position: relative; overflow: hidden; display: inline-block; cursor:pointer;}
+#selectedImage .custom-file-upload div{border: 1px solid #ccc; display: inline-block; padding: 6px 12px; cursor: pointer; margin-top:5px}
+table.profile tr > th{min-width:150px}
+
+
+@media all and (max-width:991px){
+	.section-header h2{margin-bottom:10px}
+	.section-header ol.breadcrumb{text-align:left;}
+	
+	/* Gatekeeper Pages css*/
+	.manual-entry .flat-block{margin-top:0;}
+}
+@media all and (max-width:767px){
+	#content .section-header h2 {line-height: 28px; margin-top: 5px;}
+	#content .section-header h2 a{width:100%; display:block; margin:5px 0}
+	
+}
+@media all and (max-width:640px){
+	.dt-buttons a.dt-button, .dt-buttons a.dt-button:focus, .dt-buttons a.dt-button:active, .dt-buttons a.dt-button:hover {padding: 0.6em 1.2em; margin: 0 0 5px 0; width: 100%;}
+	div.dt-button-collection {left: 50% !important; transform: translateX(-50%) !important; -ms-transform: translateX(-50%) !important; -webkit-transform: translateX(-50%) !important;  -moz-transform: translateX(-50%) !important;}
+	.dataTables_wrapper .dataTables_length {margin-bottom: 10px;}
+}
+@media all and (max-width:479px){
+	.dataTables_wrapper .pagination > li > a{padding: 4.5px 8px;}
+	
+	/* Gatekeeper Pages css*/
+	table.profile tr > th{min-width:auto}
+}

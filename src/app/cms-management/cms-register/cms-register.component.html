@@ -1,0 +1,62 @@
+<app-header></app-header>
+<!-- BEGIN CONTENT-->
+<div id="content">
+  <section>
+    <div class="section-header">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>CMS Management</h2>
+        </div>
+        <div class="col-md-6">
+          <ol class="breadcrumb" style="background-color: #e5e6e6">
+            <li><a routerLink="/dashboard"><i class="fa fa-home"></i> Home</a></li>
+            <li><a routerLink="/cmsManagement"> CMS Management</a></li>
+            <li class="active">Add Page</li>rve
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <form class="form floating-label formValidate" role="form">
+                <div class="col-xs-12 col-md-4 col-md-push-8 text-center">
+                  <div class="form-group" id="selectedImage">
+                    <img class="mg-responsive" src="images/profile.jpg" alt="" id="secImage"><br/>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-8 col-md-pull-4">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <input class="form-control" type="text" data-validation="required" data-validation-error-msg="Enter Page Name">
+                        <label>Page Name<span class="text-danger">*</span></label>
+                      </div>
+                      <div class="form-group">
+												<textarea id="ckeditor" class="form-control ckeditor">
+													<h2>WYSIWYG Editor</h2>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla.
+													Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.
+													<h3>Lacinia</h3>
+												</textarea>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div><br/>
+                    <div class="col-xs-12">
+                      <button class="btn btn-primary" type="submit" name="submit">Save</button>&nbsp;
+                      <a href="<?php echo $base_url; ?>/pages/cms-management.php" class="btn btn-default-dark">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- END CONTENT -->
+<app-navigation></app-navigation>

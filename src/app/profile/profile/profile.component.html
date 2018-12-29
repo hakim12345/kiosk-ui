@@ -1,0 +1,90 @@
+<app-header></app-header>
+
+<!-- BEGIN CONTENT-->
+<div id="content">
+  <section>
+    <div class="section-header">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Profile</h2>
+        </div>
+        <div class="col-md-6">
+          <ol class="breadcrumb" style="background-color: #e5e6e6">
+            <li><a href="<?php echo $base_url; ?>/pages/societyadmin/dashboard.php"><i class="fa fa-home"></i> Home</a></li>
+            <li class="active">Profile</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <form class="form floating-label formValidate" role="form">
+                <div class="col-xs-12 col-md-4 col-md-push-8 text-center">
+                  <div class="form-group" id="selectedImage">
+                    <img class="mg-responsive" src="assets/images/avatar1.jpg" alt="" id="secImage"><br/>
+                    <div><a href="<?php echo $base_url; ?>/change-password.php"><i class="fa fa-key"></i> Change Password</a></div>
+                    <!--<div class="custom-file-upload">
+                                            <input type='file' id="imgInp">
+                                            <div><i class="fa fa-cloud-upload"></i> Change Image</div>
+                                        </div>-->
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-8 col-md-pull-4">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" value="Society" data-validation="required" data-validation-error-msg="Enter First Name">
+                        <label>First Name<span class="text-danger">*</span></label>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" value="Admin" data-validation="required" data-validation-error-msg="Enter Last Name">
+                        <label>Last Name<span class="text-danger">*</span></label>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" value="9874562154" data-validation="number length" data-validation-length="10-12" data-validation-error-msg="Contact No. has to be an Numeric value (10-12 chars)">
+                        <label>Contact No.<span class="text-danger">*</span></label>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <input class="form-control" type="email" value="bc@gmail.com" data-validation="email" data-validation-error-msg="Enter Email Id">
+                        <label>Email Id <span class="text-danger">*</span></label>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" value="Society Admin" data-validation="required" data-validation-error-msg="Enter First Name">
+                        <label>Job Role<span class="text-danger">*</span></label>
+                      </div>
+                      <div class="form-group" id="selectedImage" style="width:100%">
+                        <div class="custom-file-upload">
+                          <input type='file' id="imgInp">
+                          <div><i class="fa fa-cloud-upload"></i> Select your Image</div>
+                        </div>
+                        <label>Upload New Photo<span class="text-danger">*</span></label>
+                      </div>
+                    </div>
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <textarea class="form-control" data-validation="required" data-validation-error-msg="Enter Address" rows="2">601 A, Parshwanath E-Square, Corporate road, Prahlad Nagar, Ahmedabad 380015.</textarea>
+                        <label>Address</label>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div><br/>
+                    <div class="col-xs-12">
+                      <button class="btn btn-danger" type="submit" name="submit">Save</button>
+                      <a href="<?php echo $base_url; ?>/pages/societyadmin/dashboard.php" class="btn btn-default-dark">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- END CONTENT -->
+<app-navigation></app-navigation>

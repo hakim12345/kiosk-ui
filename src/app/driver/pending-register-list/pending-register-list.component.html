@@ -1,0 +1,104 @@
+<!-- BEGIN CONTENT-->
+<app-header></app-header>
+<div id="content">
+  <section style="margin-left: -30px; margin-right: -90px;">
+    <div class="section-header">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Registration Request</h2>
+        </div>
+        <div class="col-md-6">
+          <ol class="breadcrumb" style="background-color: #e5e6e6">
+            <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+            <li class="active">Registration Request</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="md-form">
+            <input type="text" class="form-control" id="search-input"
+                   mdbInputDirective>
+            <label for="search-input">Search</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-striped table-bordered dataTable no-footer ResTable" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5" id="dtBasicExample" cellspacing="0" width="100%">
+                <thead>
+                <tr class="text-uppercase">
+                  <th class="text-center">No.</th>
+                  <th>Request ID</th>
+                  <th>Driver Name</th>
+                  <th>Contact No.</th>
+                  <th>State</th>
+                  <th>City</th>
+                  <th>Car Type</th>
+                  <th>Car No.</th>
+                  <th>Aadhar</th>
+                  <th>Licence</th>
+                  <th class="text-center">action</th>
+                </tr>
+                </thead>
+                <tbody *ngFor="let driverRegisrationModel of driverRegisrationModels">
+                <tr>
+                  <td class="text-center">{{driverRegisrationModel.id}}</td>
+                  <td>{{driverRegisrationModel.requestId}}</td>
+                  <td>{{driverRegisrationModel.driverName}}</td>
+                  <td>{{driverRegisrationModel.contactNo}}</td>
+                  <td>{{driverRegisrationModel.state}}</td>
+                  <td>{{driverRegisrationModel.city}}</td>
+                  <td>{{driverRegisrationModel.carType}}</td>
+                  <td>{{driverRegisrationModel.carNo}}</td>
+                  <td>{{driverRegisrationModel.adhaarNo}}</td>
+                  <td>{{driverRegisrationModel.licenseNo}}</td>
+
+                  <td class="text-center">
+                    <table class="actionIcon">
+                      <tr>
+                        <td><a routerLink="/viewDriver/{{driverRegisrationModel.id}}" title="View" data-tooltip="tooltip" data-placement="top" data-original-title="Edit Record"><i class="fa fa-eye" style="color: #022a2b"></i></a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                </tbody>
+                <!-- <tfoot>
+                 <tr>
+                   <td colspan="4">
+                     <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+                   </td>
+                 </tr>
+                 </tfoot>-->
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!--end .row -->
+    </div>
+  </section>
+</div>
+<app-navigation></app-navigation>
+<!-- END CONTENT -->
+<div class="modal fade" id="actInac-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-center">
+      <div class="modal-body text-center">
+        <h3>Do you want to make Active or InActive this record?</h3><br/>
+        <a href="view-request-driver.php" class="btn btn-primary">Yes</a>
+        <button type="button" class="btn" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+    $('.dataTables_length').addClass('bs-select');
+  });
+</script>

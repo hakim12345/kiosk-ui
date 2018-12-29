@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="inner-bg" style="padding-top: 100px; padding-bottom: 0px;">
+    <div class="container">
+      <!--<div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text">
+          <h4 style="margin-top: -60px;text-align: center"><strong style="font-size: 2em; color:#4a89af">Kiosk
+            Management System</strong></h4>
+        </div>
+      </div>-->
+      <div class="row">
+        <div class="form_bg" style="margin-top: 200px">
+          <form (ngSubmit)="login(fm)" #fm="ngForm">
+            <p style="color: #8c17a0; text-align: center">{{message}}</p>
+            <h2 class="text-center" style="text-align: center">Login</h2>
+            <br/>
+            <div class="form-group" style="text-align: center; margin-top: 20px;">
+              <input type="email" class="form-control" id="username" placeholder="Enter username" name="username" ngModel name="username">
+            </div>
+            <div class="form-group" style="text-align: center">
+              <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" ngModel name="password">
+            </div>
+            <br/>
+            <div class="align-center">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In!</button>
+            </div>
+          </form><br>
+          <td><a href="" title="SignUp" data-toggle="modal" data-target="#sign-up-modal" data-tooltip="tooltip" data-placement="top" data-original-title="Sign Up"> SignUp </a></td>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="simpleModalLabel"> Register User </h4>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSave()" [formGroup]="myForm">
+          <div class="row">
+              <div class="col-md-6">
+                <label>UserName</label>
+                <div class="form-group">
+                  <input class="form-control" type="text" formControlName="username" data-validation="required" data-validation-error-msg="Sequence Number" placeholder="Enter UserName">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label>Time Interval</label>
+                <div class="form-group">
+                  <input class="form-control" type="password" formControlName="password" data-validation="required" data-validation-error-msg="Time Interval" placeholder="Enter Password">
+                </div>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Email</label>
+                  <div class="form-group">
+                    <input class="form-control" type="text" formControlName="email" data-validation="required" data-validation-error-msg="Sequence Number" placeholder="Enter Email">
+
+                  </div>
+                </div>
+                <div class="col-md-6" formGroupName="roles">
+                  <label>Select Role</label>
+                  <div class="form-group">
+                    <select id="user-role" class="form-control" formControlName="roles" (change)="getRoles($event.target.value)"  data-validation="required" data-validation-error-msg="Select role">
+                      <option value="">Select Role</option>
+                      <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+                      <option value="ROLE_CLIENT">ROLE_CLIENT</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            <div class="col-xs-12">
+              <button class="btn btn-primary" type="submit" name="submit" data-dismiss="modal" aria-hidden="true">Submit</button>&nbsp;
+              <a href="" data-dismiss="modal" aria-hidden="true" class="btn btn-default-dark">Cancel</a>
+            </div>
+            <br/>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Omit this part : Just a footer -->
+<div
+  style="position:fixed;bottom:10px;left:10px;background:#4679BC;padding:4px;border-radius:2px;border:1px solid #4679AA">
+  <a href="http://code2care.org" title="more ..."
+     style="padding:6px;text-decoration:none;font-size:12px;color:#fff;letter-spacing: 1.5px;">Code2care</a>
+</div>
